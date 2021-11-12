@@ -1,3 +1,4 @@
+/* ======= GLOBAL ======= */
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +7,44 @@
 body{
     background-color: #E5E5E5;
     font-family: 'Poppins', sans-serif;
+}
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: #363F5F;
+    font-weight: normal;
+}
+/* ======= HEADER ======= */
+header {
+    background-color: #2D4A22;
+    padding: 2rem 0 12rem 0;
+    text-align: center;
+}
+header h1 {
+    color: #fff;
+    font-weight: lighter;
+}
+.container{
+    width: min(90vw, 800px);
+    margin: auto;
+}
+/* =======  BALANCE ======= */
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color:#fff
+}
+/* =======  BALANCE ======= */
+.card{
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    color: #363F5F;
+}
+/* ======= FOOTER ======= */
+footer{
+    text-align: center;
 }
