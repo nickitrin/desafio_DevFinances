@@ -14,33 +14,35 @@ const Modal= {
 
     }
 }
-const transactions = [{
-        id: 1 ,
+
+const Transaction = {
+    all: [
+    {
         description: 'Luz',
         amount: -30000,
         date: '01/02/2022',
     },
     {    
-        id: 2 ,
         description: 'Website',
         amount: 500000,
         date: '01/02/2022'},
     {    
-        id: 3 ,
         description: 'Água',
         amount: -20000,
         date: '01/02/2022'},
     {    
-        id: 4 ,
         description:'Aluguel',
         amount: -130000,
         date: '01/02/2022'}
-    ]
-const Transaction = {
-    all: transactions,
+    ],
     add(transaction){
         Transaction.all.push(transaction)
-        console.log(Transaction.all)
+        App.reload()
+    },
+    remove(index){
+        Transaction.all.splice(index,1)
+        App.reload()
+
     },
     incomes(){
         let income = 0;
@@ -63,22 +65,7 @@ const Transaction = {
     total (){
         return Transaction.expenses() + Transaction.incomes()
     }
-}
-
-const Utils = {
-    formatCurrency(value){
-        const signal = Number(value) < 0 ? "-" : "" 
-        value = String(value).replace(/\D/g, "")
-
-        value = Number(value) / 100
-        value = value.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        })
-
-        return signal + value
-    }
-}
+};
 const DOM = {
         transactionsContainer: document.querySelector('#data-table tbody'),
             
@@ -107,7 +94,7 @@ const DOM = {
             </tr>
             `
             return html
-    },
+        },
         updateBalance(){
             document
                 .getElementById('incomeDisplay')
@@ -118,15 +105,48 @@ const DOM = {
             document
                 .getElementById('totalDisplay')
                 .innerHTML = Utils.formatCurrency(Transaction.total())
-}
-}
-transactions.forEach(function(transaction) {
-    DOM.addTransaction(transaction)
-})
-DOM.updateBalance()
+        },
+        clearTransactions(){
+            DOM.transactionsContainer.innerHTML = ""
+        }
+};
 
+const Utils = {
+    formatCurrency(value){
+        const signal = Number(value) < 0 ? "-" : "" 
+        value = String(value).replace(/\D/g, "")
+
+        value = Number(value) / 100
+        value = value.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        })
+
+        return signal + value
+    }
+}
+const Form = {
+    submit(event){
+        event.preventDefault()
+    }
+}
+const App = {
+    init (){
+        Transaction.all.forEach(transaction => {
+            DOM.addTransaction(transaction)
+        })
+        DOM.updateBalance()
+
+    },
+    reload(){
+        DOM.clearTransactions()
+        App.init()
+    },
+}
+
+App.init()
+        
 Transaction.add({
-    id: 39,
     description: 'alo',
     amount: 200,
     date: '21/01/2023'
