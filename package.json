@@ -1,0 +1,38 @@
+{
+  "name": "gulp-dev",
+  "version": "1.0.0",
+  "description": "Instalação e configuração de tasks do gulp para desenvolvimento do front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernardoblasquez/gulp-dev.git"
+  },
+  "keywords": [
+    "gulp",
+    "front-end"
+  ],
+  "author": "Bernardo Blasquez (Berna)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bernardoblasquez/gulp-dev/issues"
+  },
+  "homepage": "https://github.com/bernardoblasquez/gulp-dev#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-inline-css": "^4.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "sass": "^1.43.4"
+  },
+  "browserslist": [
+    ">= 5%",
+    "last 7 versions"
+  ]
+}
