@@ -1,0 +1,31 @@
+/* ======= GLOBAL ======= */
+:root {
+  --dark-blue: #363F5F;
+  --green:#49AA26;
+  --lightgreen: #3dd705;
+  --red: #e92929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #E5E5E5;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+  font-weight: normal;
+}
+/*# sourceMappingURL=maps/global.css.map */

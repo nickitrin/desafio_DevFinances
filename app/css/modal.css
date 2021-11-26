@@ -33,17 +33,4 @@
   opacity: 1;
   visibility: visible;
 }
-
-/* ======= RESPONSIVE ======= */
-@media (min-width: 800px) {
-  html {
-    font-size: 87.5%;
-  }
-
-  #balance {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-}
-/*# sourceMappingURL=maps/style.css.map */
+/*# sourceMappingURL=maps/modal.css.map */

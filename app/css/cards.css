@@ -1,0 +1,37 @@
+.card h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* =======  CARDS ======= */
+.card {
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  color: var(--dark-blue);
+}
+.card.total {
+  background-color: #49AA26;
+  color: white;
+}
+.card h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card p {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=maps/cards.css.map */
