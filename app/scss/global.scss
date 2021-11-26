@@ -1,4 +1,5 @@
 /* ======= GLOBAL ======= */
+
 :root{
     --dark-blue: #363F5F;
     --green:#49AA26;
@@ -16,7 +17,15 @@ body{
 }
 html{
     font-size: 93.75%;
+    @media (min-width:800px) {
+    
+        font-size: 87.5%;
+    
+    }
 }
+
+
+
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
